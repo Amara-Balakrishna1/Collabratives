@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import collbrator from './collabrator';
+import collaboratives from './collaboratives';
 
 export default combineReducers({
- collbrator
+  collaboratives
 })

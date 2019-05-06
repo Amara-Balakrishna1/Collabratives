@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from 'redux-thunk';
 import { initializeIcons } from "@uifabric/icons";
-import todoApp from "./reducers";
+import reducers from "./reducers";
 import Header from "./container/LayoutContainer";
 import Collabratives from "./container/CollabrativesContainer";
 import Collabrative from "./container/CollabrativeContainer";
@@ -18,15 +19,20 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <Header className="header" />
-      <Switch>
-        <Route exact path="/collabratives" component={Collabratives} />
-        <Route exact path="/collabrative" component={Collabrative} />
-      </Switch>
+      <main className="main">
+        <Switch>
+          <Route exact path="/" component={Collabratives} />
+          <Route exact path="/collabrative" component={Collabrative} />
+        </Switch>
+      </main>
     </Router>
   </Provider>
 );
 
-const store = createStore(todoApp);
+const middleware = [thunk];
+
+const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
+const store = createStoreWithMiddleware(reducers);
 
 Root.propTypes = {
   store: PropTypes.object.isRequired

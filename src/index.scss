@@ -15,7 +15,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #cccccc;
+  background-color: #f3f2f1;
   overflow-x: hidden;
   transition: 0.5s;
 
@@ -26,10 +26,13 @@ body {
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
 
-  a:hover {
-    color: #f1f1f1;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: #333; // #f1f1f1;
+    }
   }
 
   .closebtn {
@@ -77,13 +80,34 @@ code {
     color: white;
     font-size: 30px;
   }
+  .notifications {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    div {
+      display: flex;
+      align-items: center;
+      font-size: 21px;
+    }
+  }
 }
 
 .content {
   position: absolute;
   top: 48px;
   height: calc(100% - 48px);
-  .ms-ListGridExample a{
+  .ms-ListGridExample a {
     font-size: 16px;
   }
+  .active {
+    background: #e1dfdd;
+  }
+}
+.main {
+  position: absolute;
+  top: 48px;
+  float: left;
+  left: 250px;
+  height: calc(100% - 48px);
+  width: calc(100% - 250px);
 }

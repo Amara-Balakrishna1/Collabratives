@@ -1,0 +1,111 @@
+.Lists {
+  .ms-ListGridExample .ms-List-page {
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .ms-ListGridExample .ms-List-surface {
+    position: relative;
+  }
+
+  .ms-ListGridExample-tile {
+    outline: none;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.108),
+      0px 1.6px 3.6px rgba(0, 0, 0, 0.132);
+    border-radius: 2px;
+    .name {
+      font-family: Segoe UI;
+      font-size: 24px;
+      color: #323130;
+      padding: 5px 10px;
+    }
+    .info-1 {
+      padding: 5px 10px;
+      color: #797775;
+    }
+    .info-2 {
+      position: absolute;
+      bottom: 10px;
+      padding: 5px 10px;
+      color: #797775;
+      i {
+        padding: 0px 5px;
+      }
+    }
+  }
+
+  .ms-ListGridExample-sizer {
+    padding-bottom: 100%;
+  }
+
+  .msListGridExample-padder {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+  }
+
+  .ms-Fabric--isFocusVisible .ms-ListGridExample-tile:focus:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    box-sizing: border-box;
+    border: 1px solid white;
+  }
+
+  .ms-ListGridExample-label {
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    width: 100%;
+    font-size: small;
+    box-sizing: border-box;
+  }
+
+  .ms-ListGridExample-image {
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+.Collabratives {
+  .count {
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: #323130;
+    padding: 11px 20px;
+  }
+}
+.Collabratives,
+.detail-collabarative {
+  .addRow,
+  .col-xs-11 {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 2.22%;
+    background: #eff6fc;
+    display: flex;
+    height: 48px;
+    button {
+      background: none;
+    }
+    i {
+      color: #0078d4;
+    }
+  }
+  .col-xs-1 {
+    text-align: right;
+  }
+}
